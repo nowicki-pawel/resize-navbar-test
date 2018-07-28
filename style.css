@@ -253,11 +253,13 @@ li.active, header li:hover {
     padding: 100px;
     margin: 0;
     display: none;
+    text-transform: uppercase;
 }
 
 .site-nav ul.opening {
     display: block;
-    height: 150px;
+    height: 200px;
+    width: 100%;
 }
 
 .site-nav li {
@@ -266,7 +268,7 @@ li.active, header li:hover {
 
 .site-nav a {
     color: #EBEBD3;
-    background: rgba(17, 17, 17, 0.65);
+    background: rgb(17, 17, 17);
     display: block;
     padding: 1.5em 4em 1.5em 3em;
     text-transform: uppercase;
@@ -285,19 +287,19 @@ li.active, header li:hover {
 
 .menu-toggle {
     position: absolute;
-    padding: 0.8em;
-    top: 1em;
-    right: .5em;
+    padding: 2rem;
+    top: 0;
+    right: 0;
     cursor: pointer;
 }
 
 .hamburger, .hamburger::before, .hamburger::after {
     content: '';
     display: block;
-    background: red;
-    height: 8px;
-    width: 2em;
-    border-radius: 4px;
+    background: #C6596F;
+    height: 10px;
+    width: 50px;
+    border-radius: 10px;
     -webkit-transition: all ease-in-out 350ms;
     transition: all ease-in-out 350ms;
 }
@@ -322,4 +324,8 @@ li.active, header li:hover {
 .open .hamburger::after {
     -webkit-transform: translateY(-1px) rotate(-90deg);
     transform: translateY(-1px) rotate(-90deg);
+}
+
+.site-nav img {
+    background-color: #ffffff;
 }
