@@ -106,7 +106,6 @@ header.large img {
 .large .nav-logo {
     float: left;
     margin-left: 100px;
-    transition-delay: 0.25s;
 }
 
 /* header small */
@@ -120,8 +119,13 @@ header.small li {
     margin-top: 17px;
 }
 
-.small .nav-logo {
-    visibility: hidden;
+.small img {
+    margin-left: 100px;
+    margin-top: 0px;
+    transform:scale(0.6);
+    -webkit-transform:scale(0.6);
+    -moz-transform:scale(0.6);
+    -o-transform:scale(0.6);
 }
 
 /* Transitions */
@@ -144,6 +148,15 @@ li.active, header li:hover {
 }
 
 @media screen and (min-width: 0px) {
+
+    .small img {
+        margin-left: 100px;
+        margin-top: 0px;
+        transform:scale(0.6);
+        -webkit-transform:scale(0.6);
+        -moz-transform:scale(0.6);
+        -o-transform:scale(0.6);
+    }
 
     header {
         visibility: hidden;
@@ -175,6 +188,15 @@ li.active, header li:hover {
 }
 
 @media screen and (max-width: 1024px) {
+
+    .small img {
+        margin-left: 100px;
+        margin-top: 0px;
+        transform:scale(0.6);
+        -webkit-transform:scale(0.6);
+        -moz-transform:scale(0.6);
+        -o-transform:scale(0.6);
+    }
 
     header {
         visibility: hidden;
@@ -231,10 +253,6 @@ li.active, header li:hover {
         -moz-transition: 0s all;
         -webkit-transition: 0s all;
         -o-transition: 0s all;
-    }
-
-    .large .nav-logo {
-        transition-delay: 0.25s;
     }
 
 }
@@ -324,8 +342,4 @@ li.active, header li:hover {
 .open .hamburger::after {
     -webkit-transform: translateY(-1px) rotate(-90deg);
     transform: translateY(-1px) rotate(-90deg);
-}
-
-.site-nav img {
-    background-color: #ffffff;
 }
