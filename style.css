@@ -10,6 +10,7 @@
 
 body {
     background-color: #ebebeb;
+    font-family: sans-serif;
 }
 
 
@@ -260,24 +261,22 @@ li.active, header li:hover {
 
 /*toggle*/
 
-.site-nav {
-    margin: 0;
-    padding: 0;
-}
-
 .site-nav ul {
     flex-direction: column;
     list-style-type: none;
-    padding: 100px;
     margin: 0;
     display: none;
     text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.site-nav li:first-child {
+    margin-top: 0px;
 }
 
 .site-nav ul.opening {
     display: block;
-    height: 200px;
-    width: 100%;
 }
 
 .site-nav li {
@@ -285,61 +284,117 @@ li.active, header li:hover {
 }
 
 .site-nav a {
-    color: #EBEBD3;
-    background: rgb(17, 17, 17);
+    color: #ffffff;
+    /*background: rgba(17, 17, 17, 0.8);*/
     display: block;
-    padding: 1.5em 4em 1.5em 3em;
     text-transform: uppercase;
     text-decoration: none;
+    padding: 38px;
 }
 
-.site-nav a:hover, nav a:focus { background: #E4B363; }
+.site-nav li:hover, nav li:focus {
+    -webkit-box-shadow: inset 0px 0px 60px 5px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 0px 60px 5px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 60px 5px rgba(0,0,0,1);
+}
 
-.site-nav--icon {
-    font-size: 1.4em;
-    margin-right: 1em;
-    width: 1.1em;
-    text-align: right;
-    color: rgba(255,255,255,.4);
+.site-nav li:first-child:hover, nav li:first-child:focus {
+    -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    -moz-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
 .menu-toggle {
     position: absolute;
-    padding: 2rem;
     top: 0;
     right: 0;
     cursor: pointer;
 }
 
-.hamburger, .hamburger::before, .hamburger::after {
-    content: '';
-    display: block;
+#hamburger-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin-top: 70px;
+    margin-right: 70px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#hamburger-icon span {
+    display: inline-block;
+    position: absolute;
+    height: 18px;
+    width: 100%;
     background: #C6596F;
-    height: 10px;
-    width: 50px;
     border-radius: 10px;
-    -webkit-transition: all ease-in-out 350ms;
-    transition: all ease-in-out 350ms;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
 }
 
-.hamburger::before {
-    -webkit-transform: translateY(-7px);
-    transform: translateY(-14px);
+#hamburger-icon img {
+    right: 0;
 }
 
-.hamburger::after {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
+
+#hamburger-icon span:nth-child(1) {
+    top: 0px;
 }
 
-.open .hamburger {
+#hamburger-icon span:nth-child(2),#hamburger-icon span:nth-child(3) {
+    top: 26px;
+}
+
+#hamburger-icon span:nth-child(4) {
+    top: 52px;
+}
+
+#hamburger-icon.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+#hamburger-icon.open span:nth-child(2) {
     -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
-.open .hamburger::before { display: none; }
+#hamburger-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
 
-.open .hamburger::after {
-    -webkit-transform: translateY(-1px) rotate(-90deg);
-    transform: translateY(-1px) rotate(-90deg);
+#hamburger-icon.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+#li-hamburger-logo {
+    background-color: white;
+}
+
+#li-hamburger {
+    background-image: url("onion.jpg");
+    padding: 80px;
 }
