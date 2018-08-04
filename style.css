@@ -269,10 +269,7 @@ li.active, header li:hover {
     text-transform: uppercase;
     text-align: center;
     font-size: 3rem;
-}
-
-.site-nav li:first-child {
-    margin-top: 0px;
+    font-weight: bolder;
 }
 
 .site-nav ul.opening {
@@ -285,7 +282,6 @@ li.active, header li:hover {
 
 .site-nav a {
     color: #ffffff;
-    /*background: rgba(17, 17, 17, 0.8);*/
     display: block;
     text-transform: uppercase;
     text-decoration: none;
@@ -296,6 +292,7 @@ li.active, header li:hover {
     -webkit-box-shadow: inset 0px 0px 60px 5px rgba(0,0,0,1);
     -moz-box-shadow: inset 0px 0px 60px 5px rgba(0,0,0,1);
     box-shadow: inset 0px 0px 60px 5px rgba(0,0,0,1);
+    color: #C2D22B;
 }
 
 .site-nav li:first-child:hover, nav li:first-child:focus {
@@ -347,9 +344,6 @@ li.active, header li:hover {
     transition: .25s ease-in-out;
 }
 
-#hamburger-icon img {
-    right: 0;
-}
 
 
 #hamburger-icon span:nth-child(1) {
@@ -394,7 +388,29 @@ li.active, header li:hover {
     background-color: white;
 }
 
-#li-hamburger {
-    background-image: url("onion.jpg");
+#li-hamburger-1 {
+    background-image: url("hamburger-button-1.jpg");
     padding: 80px;
+    background-size: 100%;
+    height: 12%;
 }
+
+#li-hamburger-2 {
+    background-image: url("hamburger-button-2.jpg");
+    padding: 80px;
+    background-size: 100%;
+}
+
+#li-hamburger-3 {
+    background-image: url("hamburger-button-3.jpg");
+    padding: 80px;
+    background-size: 100%;
+}
+
+#li-hamburger-4 {
+    background-image: url("hamburger-button-4.jpg");
+    padding: 80px;
+    background-size: 100%;
+}
+
+
