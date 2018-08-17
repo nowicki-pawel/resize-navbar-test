@@ -1,14 +1,14 @@
 $(document).on("scroll", function() {
 
     if($(document).scrollTop()>100) {
-        $("header").removeClass("large").addClass("small");
+        $("header").removeClass("navbar-large").addClass("navbar-small");
     } else {
-        $("header").removeClass("small").addClass("large");
+        $("header").removeClass("navbar-small").addClass("navbar-large");
     }
 
 });
 
-$('.menu-toggle').click(function() {
+$('.hamburger-toggle').click(function() {
     $('ul').toggleClass('opening');
     $(this).toggleClass('open');
 });
