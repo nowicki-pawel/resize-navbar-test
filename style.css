@@ -154,103 +154,36 @@ section.stretch p.bottom {
 
 @media screen and (min-width: 0px) {
 
-    .navbar-small img {
-        margin-left: 100px;
-        margin-top: 0px;
-        transform:scale(0.6);
-        -webkit-transform:scale(0.6);
-        -moz-transform:scale(0.6);
-        -o-transform:scale(0.6);
-    }
-
-    header {
+    .navbar-large, .navbar-small {
         visibility: hidden;
     }
 
     .navbar-hamburger {
         visibility: visible;
-    }
-
-    header,
-    nav,
-    li {
-        transition: 0s all;
-        -moz-transition: 0s all;
-        -webkit-transition: 0s all;
-        -o-transition: 0s all;
-    }
-
-    li.active, header li:hover {
-        transition: 0s all;
-        -moz-transition: 0s all;
-        -webkit-transition: 0s all;
-        -o-transition: 0s all;
     }
 
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
 
-    .navbar-small img {
-        margin-left: 100px;
-        margin-top: 0px;
-        transform:scale(0.6);
-        -webkit-transform:scale(0.6);
-        -moz-transform:scale(0.6);
-        -o-transform:scale(0.6);
-    }
-
-    header {
+    .navbar-large, .navbar-small {
         visibility: hidden;
     }
 
     .navbar-hamburger {
         visibility: visible;
-    }
-
-    header,
-    nav,
-    li {
-        transition: 0s all;
-        -moz-transition: 0s all;
-        -webkit-transition: 0s all;
-        -o-transition: 0s all;
-    }
-
-    li.active, header li:hover {
-        transition: 0s all;
-        -moz-transition: 0s all;
-        -webkit-transition: 0s all;
-        -o-transition: 0s all;
     }
 
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 769px) {
 
-    header {
+    .navbar-large, .navbar-small {
         visibility: visible;
     }
 
     .navbar-hamburger {
         visibility: hidden;
-    }
-
-    header,
-    nav,
-    li {
-        transition: .7s all;
-        -moz-transition: .7s all;
-        -webkit-transition: .7s all;
-        -o-transition: .7s all;
-    }
-
-    li.active, header li:hover {
-        padding-bottom: 28px;
-        transition: 0s all;
-        -moz-transition: 0s all;
-        -webkit-transition: 0s all;
-        -o-transition: 0s all;
     }
 
 }
@@ -271,12 +204,13 @@ section.stretch p.bottom {
     display: none;
     text-transform: uppercase;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bolder;
 }
 
 .navbar-hamburger ul.opening {
     display: block;
+    width: 100%;
 }
 
 .navbar-hamburger li {
@@ -288,14 +222,13 @@ section.stretch p.bottom {
     display: block;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 38px;
+    padding: 15px;
 }
 
 .navbar-hamburger li:hover, nav li:focus {
-    -webkit-box-shadow: inset 0px 0px 60px 5px rgba(0,0,0,1);
-    -moz-box-shadow: inset 0px 0px 60px 5px rgba(0,0,0,1);
-    box-shadow: inset 0px 0px 60px 5px rgba(0,0,0,1);
-    color: #C2D22B;
+    -webkit-box-shadow: inset 0px 0px 100px 5px rgb(46, 47, 49);
+    -moz-box-shadow: inset 0px 0px 100px 5px rgb(46, 47, 49);
+    box-shadow: inset 0px 0px 100px 5px rgb(46, 47, 49);
 }
 
 .navbar-hamburger li:first-child:hover, nav li:first-child:focus {
@@ -303,7 +236,6 @@ section.stretch p.bottom {
     -moz-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
     box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
-
 
 .hamburger-toggle {
     position: fixed;
@@ -313,11 +245,11 @@ section.stretch p.bottom {
 }
 
 #hamburger-icon {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 50px;
     position: relative;
-    margin-top: 70px;
-    margin-right: 70px;
+    margin-top: 50px;
+    margin-right: 50px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -332,7 +264,7 @@ section.stretch p.bottom {
 #hamburger-icon span {
     display: inline-block;
     position: absolute;
-    height: 18px;
+    height: 13px;
     width: 100%;
     background: #C6596F;
     border-radius: 10px;
@@ -349,20 +281,24 @@ section.stretch p.bottom {
 }
 
 
-
-#hamburger-icon span:nth-child(1) {
-    top: 0px;
+#hamburger-icon span:nth-child(2),#hamburger-icon span:nth-child(3) {
+    top: 20px;
 }
 
-#hamburger-icon span:nth-child(2),#hamburger-icon span:nth-child(3) {
-    top: 26px;
+#hamburger-icon span:nth-child(2) {
+    background-color: #C2D22B;
 }
 
 #hamburger-icon span:nth-child(4) {
-    top: 52px;
+    top: 40px;
 }
 
 #hamburger-icon.open span:nth-child(1) {
+    width: 0%;
+    left: 50%;
+}
+
+#hamburger-icon.open span:nth-child(4) {
     top: 18px;
     width: 0%;
     left: 50%;
@@ -382,39 +318,91 @@ section.stretch p.bottom {
     transform: rotate(-45deg);
 }
 
-#hamburger-icon.open span:nth-child(4) {
-    top: 18px;
-    width: 0%;
-    left: 50%;
-}
 
 #li-hamburger-logo {
     background-color: white;
+    padding-top: 6px;
 }
 
 #li-hamburger-1 {
     background-image: url("hamburger-button-1.jpg");
-    padding: 80px;
+    padding: 50px;
     background-size: 100%;
-    height: 12%;
 }
 
 #li-hamburger-2 {
     background-image: url("hamburger-button-2.jpg");
-    padding: 80px;
+    padding: 50px;
     background-size: 100%;
 }
 
 #li-hamburger-3 {
     background-image: url("hamburger-button-3.jpg");
-    padding: 80px;
+    padding: 50px;
     background-size: 100%;
 }
 
 #li-hamburger-4 {
     background-image: url("hamburger-button-4.jpg");
-    padding: 80px;
+    padding: 50px;
     background-size: 100%;
 }
 
 
+@media screen and (max-width: 425px) {
+
+    #li-hamburger-1, #li-hamburger-2, #li-hamburger-3, #li-hamburger-4 {
+        padding: 40px;
+        font-size: 1.5rem;
+    }
+
+    #hamburger-icon span {
+        height: 10px;
+    }
+
+    #hamburger-icon {
+        width: 45px;
+        height: 40px;
+        position: relative;
+        margin-top: 30px;
+        margin-right: 30px;
+    }
+
+    #hamburger-icon span:nth-child(2),#hamburger-icon span:nth-child(3) {
+        top: 15px;
+    }
+
+
+    #hamburger-icon span:nth-child(4) {
+        top: 30px;
+    }
+
+    #hamburger-icon.open span:nth-child(1) {
+        width: 0%;
+        left: 50%;
+    }
+
+    #hamburger-icon.open span:nth-child(4) {
+        top: 10px;
+        width: 0%;
+        left: 50%;
+    }
+
+    .open img {
+        transform:scale(0.6);
+        -webkit-transform:scale(0.6);
+        -moz-transform:scale(0.6);
+        -o-transform:scale(0.6);
+        margin: 0;
+
+    }
+
+    #li-hamburger-logo {
+        padding-top: 0;
+        height: 100px;
+    }
+
+    .navbar-hamburger a {
+        padding: 0;
+    }
+}
