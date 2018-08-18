@@ -10,7 +10,6 @@
 
 body {
     background-color: #ebebeb;
-    font-family: sans-serif;
 }
 
 
@@ -30,6 +29,10 @@ body {
 .navbar-container {
     width: 100%;
     margin: 0 auto;
+}
+
+#navbar {
+    box-shadow: 0 -2px 12px 1px hsla(0,0%,80%,.8);
 }
 
 /* Section */
@@ -72,12 +75,14 @@ section.stretch p.bottom {
 }
 
 .navbar-large li.active, .navbar-large li:hover {
-    border-bottom: 3px solid #C6596F;
+    border-bottom: 4px solid #C6596F;
+    transform: scale(1.05);
 }
 
 .navbar-small li.active, .navbar-small li:hover {
-    border-bottom: 3px solid #C6596F;
+    border-bottom: 4px solid #C6596F;
     padding-bottom: 15px;
+    transform: scale(1.03);
 }
 
 
@@ -101,6 +106,10 @@ section.stretch p.bottom {
 
 .navbar-large img {
     margin-top: 13px;
+    transition: .7s;
+    -moz-transition: .7s;
+    -webkit-transition: .7s;
+    -o-transition: .7s;
 }
 
 .navbar-large .nav-logo {
@@ -120,17 +129,18 @@ section.stretch p.bottom {
 }
 
 .navbar-small img {
+    transform: scale(0.6);
+    transition: .7s;
+    -moz-transition: .7s;
+    -webkit-transition: .7s;
+    -o-transition: .7s;
     margin-left: 100px;
-    margin-top: 0px;
-    transform:scale(0.6);
-    -webkit-transform:scale(0.6);
-    -moz-transform:scale(0.6);
-    -o-transform:scale(0.6);
 }
 
 /* Transitions */
 
-.navbar-large .nav-logo, .navbar-small .nav-logo{
+
+.navbar-large, .navbar-small{
     transition: .7s;
     -moz-transition: .7s;
     -webkit-transition: .7s;
@@ -150,6 +160,17 @@ section.stretch p.bottom {
     -moz-transition: 0s all;
     -webkit-transition: 0s all;
     -o-transition: 0s all;
+}
+
+.navbar-large li, .navbar-small li {
+    transition: .7s all;
+    -moz-transition: .7s all;
+    -webkit-transition: .7s all;
+    -o-transition: .7s all;
+}
+
+.navbar-small li.active, .navbar-small li:hover {
+    padding-bottom: 15px;
 }
 
 @media screen and (min-width: 0px) {
@@ -386,15 +407,6 @@ section.stretch p.bottom {
         top: 10px;
         width: 0%;
         left: 50%;
-    }
-
-    .open img {
-        transform:scale(0.6);
-        -webkit-transform:scale(0.6);
-        -moz-transform:scale(0.6);
-        -o-transform:scale(0.6);
-        margin: 0;
-
     }
 
     #li-hamburger-logo {
