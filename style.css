@@ -266,8 +266,8 @@ section.stretch p.bottom {
 }
 
 #hamburger-icon {
-    width: 55px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: relative;
     margin-top: 50px;
     margin-right: 50px;
@@ -285,7 +285,7 @@ section.stretch p.bottom {
 #hamburger-icon span {
     display: inline-block;
     position: absolute;
-    height: 13px;
+    height: 8px;
     width: 100%;
     background: #C6596F;
     border-radius: 10px;
@@ -299,11 +299,13 @@ section.stretch p.bottom {
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
+    margin-top: 16px;
+    margin-left: 12px;
 }
 
 
 #hamburger-icon span:nth-child(2),#hamburger-icon span:nth-child(3) {
-    top: 20px;
+    top: 13px;
 }
 
 #hamburger-icon span:nth-child(2) {
@@ -311,12 +313,13 @@ section.stretch p.bottom {
 }
 
 #hamburger-icon span:nth-child(4) {
-    top: 40px;
+    top: 26px;
 }
 
 #hamburger-icon.open span:nth-child(1) {
-    width: 0%;
     left: 50%;
+    width: 0%;
+    margin-top:10px;
 }
 
 #hamburger-icon.open span:nth-child(4) {
@@ -377,38 +380,6 @@ section.stretch p.bottom {
         font-size: 1.5rem;
     }
 
-    #hamburger-icon span {
-        height: 10px;
-    }
-
-    #hamburger-icon {
-        width: 45px;
-        height: 40px;
-        position: relative;
-        margin-top: 30px;
-        margin-right: 30px;
-    }
-
-    #hamburger-icon span:nth-child(2),#hamburger-icon span:nth-child(3) {
-        top: 15px;
-    }
-
-
-    #hamburger-icon span:nth-child(4) {
-        top: 30px;
-    }
-
-    #hamburger-icon.open span:nth-child(1) {
-        width: 0%;
-        left: 50%;
-    }
-
-    #hamburger-icon.open span:nth-child(4) {
-        top: 10px;
-        width: 0%;
-        left: 50%;
-    }
-
     #li-hamburger-logo {
         padding-top: 0;
         height: 100px;
@@ -417,4 +388,18 @@ section.stretch p.bottom {
     .navbar-hamburger a {
         padding: 0;
     }
+
+    .hamburger-toggle {
+        transform:scale(1.5);
+    }
+}
+
+
+.hamburger-box {
+    background-color: white;
+    border-radius: 100px;
+    width:65px;
+    height:65px;
+    align-items: center;
+    justify-content: center;
 }
